@@ -1,0 +1,538 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>www.computer.com</title>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<style type="text/css">
+		/*Navigation section*/
+
+		.nav{
+			display: flex;
+			justify-content: space-around;
+			top: 0;
+			padding: 5px;
+			position: fixed;
+			width: 100%;
+			z-index: 10;
+			background-color: whitesmoke;
+		}
+		.nav a i{
+			padding: 0 20px 0 20px;
+		}
+		.nav a{
+			text-decoration: none;
+			color: black;
+			font-size: 20px;
+		}
+		.nav input{
+			width: 30rem;
+
+		}
+		.logo{
+			display: inline-flex;
+			font-family: cursive;
+			letter-spacing: 1px;
+			font-size: 20px;
+		}
+		.log{
+		    transform: rotate(20deg);
+		}
+		.logo span{
+			color: blueviolet;
+			display: inline-flex;
+			font-weight: bold;
+		}
+
+		/*Navigation End*/
+
+		/*Sub-navigation start*/
+
+		.sub-nav{
+			padding-top: 5px;
+			background-color: blue;
+			color: white;
+			font-size: 30px;
+			padding-bottom: 5px;
+		}
+
+		.sub-nav span{
+			margin-left: 3rem;
+		}
+
+		.sub-nav a{
+			color: white;
+			font-size: 30px;
+			text-decoration: none;
+			padding: 0 20px;
+		}
+
+		/*sub-Navigation End*/
+
+		/*Section 1 start*/
+
+		.section1{
+			background-color: whitesmoke;
+			display: flex;
+			padding-left: 6rem;
+			margin-top: 5px;
+			box-shadow: 0 1px darkgrey, 0 -1px darkgrey;
+
+		}
+
+		.section1 a{
+			text-decoration: none;
+			color: black;
+			margin: 20px;
+			padding: 30px;
+			text-align: center;
+			word-spacing: 5px;
+		}
+
+		/*section 1 End*/
+
+		/*Section 2 start*/
+
+		.section2{
+			display: flex;
+			margin-top: 4rem;
+			padding-left: 50px;
+			font-family: sans-serif;
+			box-shadow: 8px 8px 10px black;
+		}
+		.section2 .inspiron img{
+			height: 250px;
+			width: 400px;
+		}
+		.section2 .inspiron{
+			float: right;
+			margin-left: 20rem;
+		}
+		.section2 .button1{
+			background-color: blue;
+			color: white;
+			padding: 15px;
+			border-radius: 5px;
+			border-color: blue;
+			cursor: pointer;
+		}
+		.section2 .button2{
+			padding: 15px;
+			color: blue;
+			border-radius: 5px;
+			border-color: blue;
+			border-width: 1px;
+		}
+		.section2 .button2:hover{
+			padding: 15px;
+			color: white;
+			background-color: blue;
+			border-radius: 5px;
+			border-color: blue;
+			border-width: 1px;
+			cursor: pointer;
+		}
+		.insp-det h2{
+			text-transform: uppercase;
+		}
+
+		/*Section 2 End*/
+
+		/*Section 3 start*/
+		.cont{
+			width: 250px;
+			height: 450px;
+			box-shadow: 10px 10px 5px grey;
+			float: left;
+			margin-top: 5rem;
+			margin-left: 2rem;
+		}
+		.cont:hover{
+			display: block;
+			transform: scale(1.1,1.1);
+		}
+		.cont-img{
+			width: 100px;
+			height: 275px;
+		}
+		.cont-content{
+			width: 250px;
+			height: 150px;
+		}
+		.price{
+			display: inline-flex;
+			padding: 10px;
+		}
+		.buy{
+			margin-bottom: 20px;
+			margin-left: 105px;
+			cursor: pointer;
+		}
+		/*Section 3 End*/
+
+		/*image slider start*/
+
+
+		/*image slider end*/
+
+		.a{
+			display: inline-flex;
+			width: 94%;
+			height: 200px;
+			float: left;
+			margin-top: 25vh;
+			justify-content: space-between;
+			box-shadow: 1px 1px 5px grey,-1px -1px 5px grey;
+			padding: 40px;
+		}
+		.con{
+			font-size: 30px;
+			font-weight: 500;
+			text-align: center;
+		}
+		.small{
+			font-size: 15px;
+		}
+		.con button{
+			background-color: blue;
+			color: white;
+			border: none;
+			outline: none;
+			font-size: 30px;
+			padding: 5px;
+			margin-top: 50px;
+			border-radius: 5px;
+		}
+		.b{
+			margin-top: 50px;
+			display: inline-flex;
+			width: 94%;
+			height: 200px;
+			float: left;
+			justify-content: space-between;
+			box-shadow: 1px 1px 5px grey,-1px -1px 5px grey;
+			padding: 40px;
+		}
+		.footer{
+			text-align: center;
+			width: 100%;
+			height: 100px;
+			box-shadow: 1px 1px 3px black,-1px -1px 3px black;
+			margin-top: 200%;
+			background-color: grey;
+		}
+		.footer p{
+			font-size: 20px;
+			font-weight: 300;
+			margin-top: 150px;
+			padding: 100px 15%;
+			background: #333;
+			color: #efefef;
+			display: flex;
+			width: 100px;
+		}
+		.footer div{
+			text-align: center;
+
+		}
+		.co-2{
+			flex grid-row: 2;
+		}
+		.footer h3{
+			font-weight: 300;
+			margin-bottom: 30px;
+
+		}
+
+
+
+	</style>
+</head>
+<body>
+<!-- Navigation section start -->
+		<div class="nav">
+		<div class="logo"><span>S&nbsp;<div class="logo">B</div></span>&nbsp; Enterprises</div>
+		<input type="Search" placeholder="Search pc">
+		<a href="contact"><i class="fa fa-phone" aria-hidden="true"></i>CONTACT US</a>
+		<a href="Cart"><i class="fa fa-shopping-cart" aria-hidden="true"></i>CART</a>
+		<a href="Signin"><i class="fa fa-user" aria-hidden="true"></i>SIGNIN</a>
+		<a href="Language"><i class="fa fa-globe" aria-hidden="true"></i>EN/IN</a>
+	</div>
+<!-- Navigation section End -->
+
+<!-- sub-Navigation Start -->
+         <div class="sub-nav">
+         	<hr>
+         	<span>APEX</span>
+         	<a href="Products">Products</a>
+         	<a href="solutions">Solutions</a>
+         	<a href="Services">Services</a>
+         	<a href="Support">Support</a>
+         	<a href="Deals">Deals</a>
+         	<a href="Find">Find a Store</a>
+         	<a href="About">About Us</a>
+         </div>
+<!-- Sub -Navigation End -->
+      
+ <!-- Section 1 start -->
+
+         <div class="section1">
+         	<a href="laptops"><i class="fa fa-laptop" aria-hidden="true"></i><br><span>Laptops</span></a>
+         	<a href="desktops"><i class="fa fa-desktop" aria-hidden="true"></i><br><span>Desktop</span></a>
+         	<a href="alienware"><i class="fa fa-reddit" aria-hidden="true"></i><br><span>Alienware</span></a>
+         	<a href="workstation"><i class="fa fa-building-o" aria-hidden="true"></i><br><span>Workstation</span></a>
+         	<a href="accessories"><i class="fa fa-television" aria-hidden="true"></i><br><span>Monitors & Accessories</span></a>
+         	<a href="Server"><i class="fa fa-server" aria-hidden="true"></i><br>Servers & Storage</a>
+         </div>  
+ <!-- Section 1 End -->
+
+ <!-- Section 2 starts -->
+
+         <div class="section2">
+         	<div class="insp-det">
+         	<h2>New inspiron 16</h2>
+         	<h1>Versatile By Design</h1>
+         	<h3>Get instant discount on UPI/Net-banking & No Cost EMI.&nbsp;<i class="fa fa-info-circle" aria-hidden="true"></i></h3>
+         	<button class="button1">For Home</button>
+         	<button class="button2">For Business</button>
+         </div>
+         <div class="inspiron">
+         	<img src="https://live.staticflickr.com/65535/51118566040_36583b6937_b.jpg">
+         </div>
+         	
+         </div>
+
+ <!-- Section 2 End -->
+
+ <!-- Section 3 Start -->
+
+          <div class="cont">
+          	<div class="cont-img">
+          		<img src="https://m.media-amazon.com/images/I/41ZziloHwRL._SX300_SY300_QL70_FMwebp_.jpg" width="250px" height="300px">
+          	</div>
+          	<div class="cont-content">
+          		<div class="prod-link"><a href="prod">HP Pavilion x360 11th Gen Intel Core i7 14 inch(35.6 cm) FHD,IPS, Multitouch 2-in-1 Laptop</a></div><br>
+          		<p class="price">RS.47999</p><del class="price">Rs.78999</del><p class="price">37% off</p>
+          		<button class="buy">Buy Now</button>
+          	</div>
+          </div>
+
+          <div class="cont">
+          	<div class="cont-img">
+          		<img src="https://rukminim1.flixcart.com/image/416/416/krxtrww0/computer/e/l/c/redmibook-15-e-learning-edition-thin-and-light-laptop-redmi-original-imag5m8jkjbaybeu.jpeg?q=70" width="250px" height="175px">
+          	</div>
+          	<div class="cont-content">
+          		<div class="prod-link"><a href="prod">Redmi Book 15 Intel Core I3 11Th Gen/8 Gb/256 Gb Ssd/Windows 11 Home/15.6 Inches</a></div><br>
+          		<p class="price">RS.27,990</p><del class="price">RS.51,999</del><p class="price">46% off</p>
+          		<button class="buy">Buy Now</button>
+          	</div>
+          </div>
+
+          <div class="cont">
+          	<div class="cont-img">
+          		<img src="https://m.media-amazon.com/images/I/41PnIUzyYML._SX300_SY300_QL70_FMwebp_.jpg" width="250px" height="250px">
+          	</div>
+          	<div class="cont-content">
+          		<div class="prod-link"><a href="prod">Lenovo IdeaPad Slim 3 Intel Core i3-1115G4 11th Gen 15.6" (39.62cm) FHD Laptop</a></div><br>
+          		<p class="price">RS.39,490</p><del class="price">Rs.60850</del><p class="price">39% off</p>
+          		<button class="buy">Buy Now</button>
+          	</div>
+          </div>
+
+          <div class="cont">
+          	<div class="cont-img">
+          		<img src="https://m.media-amazon.com/images/I/71AM+2rWiAL._SY450_.jpg" width="250px" height="250px">
+          	</div>
+          	<div class="cont-content">
+          		<div class="prod-link"><a href="prod">Acer Extensa 15 Lightweight Laptop Intel Core i3 11th Gen Processor </a></div><br>
+          		<p class="price">RS.37,990</p><del class="price">Rs.59999</del><p class="price">32% off</p>
+          		<button class="buy">Buy Now</button>
+          	</div>
+          </div>
+		  <div class="cont">
+			<div class="cont-img">
+				<img src="https://m.media-amazon.com/images/I/61q6x-ll5FL._SY450_.jpg" width="250px" height="300px">
+			</div>
+			<div class="cont-content">
+				<div class="prod-link"><a href="prod">HP Pavilion x360 11th Gen Intel Core i7 14 inch(35.6 cm) FHD,IPS, Multitouch 2-in-1 Laptop</a></div><br>
+				<p class="price">RS.47999</p><del class="price">Rs.78999</del><p class="price">37% off</p>
+				<button class="buy">Buy Now</button>
+			</div>
+		</div>
+		<div class="cont">
+			<div class="cont-img">
+				<img src="https://m.media-amazon.com/images/I/71S8U9VzLTL._SX679_.jpg" width="250px" height="300px">
+			</div>
+			<div class="cont-content">
+				<div class="prod-link"><a href="prod">Pavilion x360 11th Gen Intel Core i5 14 inch(35.6 cm) FHD Multitouch 2-in-1 Laptop(16GB RAM/512GB SSD</a></div><br>
+				<p class="price">RS.47999</p><del class="price">Rs.78999</del><p class="price">37% off</p>
+				<button class="buy">Buy Now</button>
+			</div>
+		</div>
+		<div class="cont">
+			<div class="cont-img">
+				<img src="https://m.media-amazon.com/images/I/71nA5iikwdL._SX679_.jpg" width="250px" height="300px">
+			</div>
+			<div class="cont-content">
+				<div class="prod-link"><a href="prod">samsung IdeaPad D330 Intel Celeron N4020 10.1" (25cm)HD IPS Detachable 2-in-1 Laptop </a></div><br>
+				<p class="price">RS.47999</p><del class="price">Rs.78999</del><p class="price">37% off</p>
+				<button class="buy">Buy Now</button>
+			</div>
+		</div>
+		<div class="cont">
+			<div class="cont-img">
+				<img src="https://m.media-amazon.com/images/I/41DEbHObXAL._SX300_SY300_QL70_FMwebp_.jpg" width="250px" height="300px">
+			</div>
+			<div class="cont-content">
+				<div class="prod-link"><a href="prod">Lenovo IdeaPad Slim 5 12th Gen Intel Core i5-1235U 15.6" (39.62cm,16GB/512GB SDD/Windows 11</a></div><br>
+				<p class="price">RS.47999</p><del class="price">Rs.78999</del><p class="price">37% off</p>
+				<button class="buy">Buy Now</button>
+			</div>
+		</div>
+		<div class="cont">
+			<div class="cont-img">
+				<img src="https://m.media-amazon.com/images/I/41h8nAsiOQL._SX300_SY300_QL70_FMwebp_.jpg" width="250px" height="300px">
+			</div>
+			<div class="cont-content">
+				<div class="prod-link"><a href="prod">11th Gen Intel Core i3-1115G4, 8GB RAM/256GB SSD 14-inch(35.6 cm) Micro-Edge, Anti-Glare, FHD Laptop</a></div><br>
+				<p class="price">RS.47999</p><del class="price">Rs.78999</del><p class="price">37% off</p>
+				<button class="buy">Buy Now</button>
+			</div>
+		</div>
+		<div class="cont">
+			<div class="cont-img">
+				<img src="https://m.media-amazon.com/images/I/61M4b4UejlS._SX679_.jpg" width="250px" height="300px">
+			</div>
+			<div class="cont-content">
+				<div class="prod-link"><a href="prod">HP 15s, 11th Gen Intel Core i3, 8GB RAM/512GB SSD 15.6-inch(39.6 cm) Micro-Edge Anti-Glare FHD</a></div><br>
+				<p class="price">RS.47999</p><del class="price">Rs.78999</del><p class="price">37% off</p>
+				<button class="buy">Buy Now</button>
+			</div>
+		</div>
+		<div class="cont">
+			<div class="cont-img">
+				<img src="https://m.media-amazon.com/images/I/41UnRGZA6ES.jpg" width="250px" height="300px">
+			</div>
+			<div class="cont-content">
+				<div class="prod-link"><a href="prod">HP Pavilion x360 11th Gen Intel Core i7 14 inch(35.6 cm) FHD,IPS, Multitouch 2-in-1 Laptop</a></div><br>
+				<p class="price">RS.97999</p><del class="price">Rs.88999</del><p class="price">37% off</p>
+				<button class="buy">Buy Now</button>
+			</div>
+		</div>
+		<div class="cont">
+			<div class="cont-img">
+				<img src="https://m.media-amazon.com/images/I/31ilq3hPhEL._SY445_SX342_QL70_FMwebp_.jpg" width="250px" height="300px">
+			</div>
+			<div class="cont-content">
+				<div class="prod-link"><a href="prod">CH Intel Core 11th Gen 13.3”400Nits Thin & Light Laptop(16GB/512GB SSD/Windows 11/Office</a></div><br>
+				<p class="price">RS.87999</p><del class="price">Rs.198999</del><p class="price">37% off</p>
+				<button class="buy">Buy Now</button>
+			</div>
+		</div>
+		<div class="cont">
+			<div class="cont-img">
+				<img src="https://m.media-amazon.com/images/I/413ypqk25vL._SX569_.jpg" width="250px" height="300px">
+			</div>
+			<div class="cont-content">
+				<div class="prod-link"><a href="prod">MacBook Air 13.6 inch Case 2022 Release A2681 M2 Chip with Liquid Retina Display & Touch</a></div><br>
+				<p class="price">RS.47999</p><del class="price">Rs.89999</del><p class="price">37% off</p>
+				<button class="buy">Buy Now</button>
+			</div>
+		</div>
+		<div class="cont">
+			<div class="cont-img">
+				<img src="https://m.media-amazon.com/images/I/41CvNGqdI3L._SY445_SX342_QL70_FMwebp_.jpg" width="250px" height="300px">
+			</div>
+			<div class="cont-content">
+				<div class="prod-link"><a href="prod">Apple MacBook Air LaptoP: 34.46 cm (13.6-inch) Liquid Retina Display, 8GB RAM, 256GB SSD</a></div><br>
+				<p class="price">RS.47999</p><del class="price">Rs.98999</del><p class="price">37% off</p>
+				<button class="buy">Buy Now</button>
+			</div>
+		</div>
+		<div class="cont">
+			<div class="cont-img">
+				<img src="https://m.media-amazon.com/images/I/31D9KKKl9aL._SY445_SX342_QL70_FMwebp_.jpg" width="250px" height="300px">
+			</div>
+			<div class="cont-content">
+				<div class="prod-link"><a href="prod">MSI Gaming GF63 Thin, Intel i5-11400H, 40CM FHD 144Hz Gaming Laptop (8GB/512GB NVMe SSD/Windows 11 Home/Nvidia GTX1650 4GB GDDR6/ Black/1.86Kg)</a></div><br>
+				<p class="price">RS.47999</p><del class="price">Rs.78999</del><p class="price">37% off</p>
+				<button class="buy">Buy Now</button>
+			</div>
+		</div>
+		<div class="cont">
+			<div class="cont-img">
+				<img src="https://m.media-amazon.com/images/I/61aUBxqc5PL._SX679_.jpg" width="250px" height="300px">
+			</div>
+			<div class="cont-content">
+				<div class="prod-link"><a href="prod">Dell Inspiron 3511 Laptop, Intel Core i3-1115G4, 8GB, 512GB SSD,15.6" (39.62Cms) FHD WVA AG Narrow Border, Carbon Black</a></div><br>
+				<p class="price">RS.47999</p><del class="price">Rs.178999</del><p class="price">37% off</p>
+				<button class="buy">Buy Now</button>
+			</div>
+		</div>
+        
+		 
+	</div>
+	
+ <!-- Section 3 End -->
+
+ <!-- image slider start -->
+
+        
+ <!-- image slider end -->
+
+ <div class="a"><div class="con">
+ 	<p>High Performance Masterpiece</p>
+ 	<p class="small">popular tech at lower price at net discount and No Cost EMI.</p>
+ 	<button>Shop Now</button>
+ </div>
+ 	<img src="https://images-na.ssl-images-amazon.com/images/I/61qmz-2wTWL._AC_SY450_.jpg">
+
+ </div>
+
+ <div class="b"><div class="con">
+ 	<p>Stuning display, pure power.</p>
+ 	<p class="small">popular tech at lower price at net discount and No Cost EMI.</p>
+ 	<button>Shop Now</button>
+ </div>
+ 	<img src="https://images-na.ssl-images-amazon.com/images/I/51EBisnJhfL._AC_.jpg">
+
+ </div>
+
+ <div class="b"><div class="con">
+ 	<p>Gaming Beast,Designed for gamers.</p>
+ 	<p class="small">popular tech at lower price at net discount and No Cost EMI.</p>
+ 	<button>Shop Now</button>
+ </div>
+ 	<img src="https://th.bing.com/th/id/OIP.3U_YU4dO82g_FCEl_q8y4wHaE5?pid=ImgDet&rs=1">
+
+ </div>
+
+ <!-- footer section -->
+ <div class="footer">
+	<div class="col.1">
+	<h3>USEFUL LINKS</h3>
+	<a href="#">about</a>
+	<a href="#">services</a>
+	<a href="#">contact</a>
+	<a href="#">shop</a>
+	<a href="#">blog</a>
+
+	</div>
+	<div class="col.2">
+		<h3>NEWSLETTER</h3>
+		<form>
+			<input type="text" placeholder="your email address">
+		</form>
+	</div>
+	
+ </div>
+
+
+   
+ <!-- end -->
+
+
+
+</body>
+</html>
